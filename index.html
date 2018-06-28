@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <body class="body">
+        <header class="header">
+            <h1 class="header__title">ToDo Backbone.js</h1>
+        </header>
+        <section id="wrapper">
+        </section>
+
+
+        <!-- Основной шаблон -->
+        <script type="text/template" id="viewTodos">
+            <form action="" class="form">
+                <input type="text" name="title" placeholder="Заголовок">
+                <input type="text" name="description" placeholder="Описание">
+                <input type="button" id="buttonAdd" value="Добавить">
+            </form>
+            <div class="wrapper__list">
+                <ul class="wrapper__list-all">
+                </ul>
+            </div>
+        </script>
+        <!-- Шаблон записи -->
+        <script type="text/template" id="viewTodo">
+            <h3 contenteditable="true" class="title"><%= title %></h3>
+            <div contenteditable="true" class="desc">
+                <%= description %>
+            </div><span class="closeList">x</span>
+            <input type="button" id="butReady" value="В работе">
+        </script>
+        <script src="libs/jquery-3.3.1.min.js"></script>
+        <script src="libs/underscore-min.js"></script>
+        <script src="libs/backbone-min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>
